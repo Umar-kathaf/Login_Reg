@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    {{> header}}
+  <div>
+    <div class="container">
+      <div class="title"><span>Registration</span></div>
+      {{#if msg}}
+      <p class={{msg_type}}>{{msg}}</p>
+      {{/if}}
+        <form action="/auth/register" method="post">
+          <div class="data">
+            <i class="fa-sharp fa-solid fa-file-signature"></i>
+                <!-- <label for="email">Email</label> -->
+                <input 
+                    type="text" 
+                    name="name"
+                    placeholder="Enter Your name" 
+                    required 
+                />
+          </div>
+          <div class="data">
+            <i class="fa-solid fa-envelope"></i>
+                <!-- <label for="email">Email</label> -->
+                <input 
+                    type="email"
+                    name="email" 
+                    placeholder="Enter Your Email"
+                    required 
+                />
+                {{!-- {{#if msg}}
+                <p class={{msg_type}}>{{msg}}</p>
+                {{/if}} --}}
+          </div>
+          <div class="data">
+            <i class="fa-solid fa-lock"></i>
+                <!-- <label for="password">Password</label> -->
+                <input
+                    type="password"
+                    name="password"
+                    placeholder="Enter Your Password"
+                    required
+                />
+          </div>
+          <div class="data">
+                <i class="fa-solid fa-key"></i>
+                <!-- <label for="password">Password</label> -->
+                <input
+                    type="password"
+                    name="Confirm_password"
+                    placeholder="Enter Your Confirm Password"
+                    required
+                />
+                {{!-- {{#if msg}}
+                <p class={{msg_type}}>{{msg}}</p>
+                {{/if}} --}}
+          </div>
+          <div class="btn">
+            <button type="submit">Sign-Up</button>
+          </div>
+          <div class="signup-link">
+            Already a member ?
+            <a href="/">Login now</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
